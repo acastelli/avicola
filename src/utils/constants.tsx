@@ -7,6 +7,8 @@ export const ROUTES = {
   EDIT_FORMULA: "/agregar-formula/:id",
   ADD_STOCK: "/agregar-stock",
   EDIT_DOLAR: "/cotizacion",
+  INGREDIENTS_STOCK: "/stock–ingredientes",
+  CANCHADAS: "/canchadas",
   VERSION: "/version",
 };
 

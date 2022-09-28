@@ -27,6 +27,19 @@ const sideMenuItems = [
     name: "Formulas",
     link: ROUTES.FORMULAS,
   },
+  {
+    name: "Reportes",
+    items: [
+      {
+        name: "Canchadas",
+        link: ROUTES.CANCHADAS,
+      },
+      {
+        name: "Stock de Ingredientes",
+        link: ROUTES.INGREDIENTS_STOCK,
+      },
+    ],
+  },
 ];
 
 type SideMenuProps = {
@@ -40,7 +53,7 @@ const SideMenu = ({ handleDrawerClick }: SideMenuProps) => {
     <StyledList
       disablePadding
       backcolor={theme.palette.text.black}
-      ismobile={isXs}
+      ismobile={String(isXs)}
     >
       {sideMenuItems.map((item, index) => (
         <SideMenuItem

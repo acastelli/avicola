@@ -23,9 +23,9 @@ export const StyledDiv = styled.div({
 export const StyledMainGrid = styled(Grid)<ResolutionProps>(({ ismobile }) => ({
   backgroundColor: "white",
   height: "calc(100% - 5rem)",
-  borderRadius: ismobile ? "0.5rem" : "2rem",
-  margin: ismobile ? 0 : "2rem",
-  padding: ismobile ? "0.5rem" : 0,
+  borderRadius: ismobile === "true" ? "0.5rem" : "2rem",
+  margin: ismobile === "true" ? 0 : "2rem",
+  padding: ismobile === "true" ? "0.5rem" : 0,
 }));
 
 export const StyledMainDiv = styled.div({
@@ -40,13 +40,13 @@ export const StyledMainDiv = styled.div({
 
 export const Title = styled(Typography)<ResolutionProps>(({ ismobile }) => ({
   textAlign: "left",
-  paddingBottom: ismobile ? 0 : "4rem",
-  paddingTop: ismobile ? 0 : "1rem",
+  paddingBottom: ismobile === "true" ? 0 : "4rem",
+  paddingTop: ismobile === "true" ? 0 : "1rem",
 }));
 
 export const MainContainerGrid = styled(Grid)<ResolutionProps>(
   ({ ismobile }) => ({
-    padding: ismobile ? "1rem 0.5rem" : "3rem 1rem",
+    padding: ismobile === "true" ? "1rem 0.5rem" : "3rem",
     maxWidth: "128rem",
   })
 );

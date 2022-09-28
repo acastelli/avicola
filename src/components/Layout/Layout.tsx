@@ -47,7 +47,13 @@ const Layout = ({ children }: ILayoutProps) => {
           <StyledHGrid item xs={2}>
             <HamburgerMenu />
           </StyledHGrid>
-          <StyledMainGrid item container xs={12} md={10} ismobile={isXs}>
+          <StyledMainGrid
+            item
+            container
+            xs={12}
+            md={10}
+            ismobile={String(isXs)}
+          >
             {children}
           </StyledMainGrid>
         </>

@@ -330,11 +330,11 @@ const createGenericTheme = () => {
       MuiFilledInput: {
         root: {
           borderTopLeftRadius: 0,
-          borderTopRightRadius: 0
+          borderTopRightRadius: 0,
         },
         input: {
-          padding: '27px 33px 10px'
-        }
+          padding: "27px 33px 10px",
+        },
       },
       MuiFormLabel: {
         root: {
@@ -388,9 +388,9 @@ const createGenericTheme = () => {
           padding: 0,
         },
         action: {
-          alignItems: 'start',
-          padding: '7px 0',
-        }
+          alignItems: "start",
+          padding: "7px 0",
+        },
       },
       MuiTableSortLabel: {
         root: {
@@ -399,7 +399,7 @@ const createGenericTheme = () => {
           },
           "&:focus": {
             color: $black,
-          }
+          },
         },
         icon: {
           opacity: 1,
@@ -437,13 +437,13 @@ const createGenericTheme = () => {
       },
       MuiInputBase: {
         root: {
-          fontSize: '1.8rem',
-        }
+          fontSize: "1.8rem",
+        },
       },
       MuiIconButton: {
         root: {
           "&:hover": {
-            backgroundColor: 'inherit',
+            backgroundColor: "inherit",
             borderRadius: 0,
           },
         },
@@ -453,26 +453,26 @@ const createGenericTheme = () => {
           borderRadius: 0,
         },
         child: {
-          backgroundColor: 'inherit',
+          backgroundColor: "inherit",
           borderRadius: 0,
-          
         },
       },
       MuiToolbar: {
         regular: {
           backgroundColor: $lightYellow,
-          opacity: '0.75'
+          opacity: "0.75",
         },
       },
-      MuiTableFooter:{
+      MuiTableFooter: {
         root: {
-           backgroundColor: $white
-        }
+          backgroundColor: $white,
+        },
       },
       MuiTablePagination: {
         toolbar: {
-        backgroundColor: $white
-      } },
+          backgroundColor: $white,
+        },
+      },
       MuiSnackbarContent: {
         root: {
           borderRadius: ".8rem",
@@ -486,6 +486,24 @@ const createGenericTheme = () => {
         },
         message: {
           padding: 0,
+        },
+      },
+      MuiDialogActions: {
+        root: {
+          "& .MuiButton-textPrimary": {
+            color: $white,
+          },
+          "& .MuiButton-textPrimary:hover": {
+            backgroundColor: $darkYellow,
+            color: $white,
+          },
+        },
+      },
+      MuiPickersCalendar: {
+        root: {
+          "& .MuiPickersDay-daySelected:hover": {
+            borderRadius: "50%",
+          },
         },
       },
     },

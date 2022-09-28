@@ -54,11 +54,11 @@ const Ingredientes = () => {
         justifyContent="space-between"
         alignContent="flex-start"
         alignItems={isXs ? "flex-start" : "center"}
-        ismobile={isXs}
+        ismobile={String(isXs)}
       >
         <Grid item xs={6}>
-          <Title variant={h1} color="textPrimary" ismobile={isXs}>
-            Ingredientes
+          <Title variant={h1} color="textPrimary" ismobile={String(isXs)}>
+            INGREDIENTES
           </Title>
         </Grid>
         <Grid item xs={6} container justifyContent="flex-end">
@@ -81,7 +81,7 @@ const Ingredientes = () => {
             )}
           </Grid>
         </Grid>
-        <StyledGrid item xs={12} container ismobile={isXs}>
+        <StyledGrid item xs={12} container ismobile={String(isXs)}>
           <Table
             setAlert={setAlert}
             setUpdateIngrediente={setUpdateIngrediente}

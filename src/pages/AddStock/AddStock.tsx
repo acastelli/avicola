@@ -29,6 +29,7 @@ const AddStock = ({ ingrediente, handleClose }: AddStockProps) => {
       id: ingrediente.id,
       name: ingrediente.name,
       quantity: quantity,
+      minQuantity: ingrediente.minQuantity,
       currency: data.currency ? data.currency : ingrediente.currency,
       cost: data.cost ? data.cost : ingrediente.cost,
     };
@@ -61,10 +62,10 @@ const AddStock = ({ ingrediente, handleClose }: AddStockProps) => {
         justifyContent="space-between"
         alignItems="center"
         direction="column"
-        ismobile={isXs}
+        ismobile={String(isXs)}
       >
         <Grid item>
-          <StyledTitle variant={h2} color="textPrimary" ismobile={isXs}>
+          <StyledTitle variant={h2} color="textPrimary" ismobile={String(isXs)}>
             Agregar Stock de {ingrediente?.name}
           </StyledTitle>
         </Grid>

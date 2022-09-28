@@ -58,10 +58,14 @@ const EditDolar = () => {
           alignItems="center"
           direction={"column"}
           alignContent={"center"}
-          ismobile={isXs}
+          ismobile={String(isXs)}
         >
           <Grid item>
-            <StyledTitle variant={h1} color="textPrimary" ismobile={isXs}>
+            <StyledTitle
+              variant={h1}
+              color="textPrimary"
+              ismobile={String(isXs)}
+            >
               MODIFICAR COTIZACIÓN
             </StyledTitle>
           </Grid>

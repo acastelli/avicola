@@ -10,6 +10,8 @@ import AddFormula from "pages/AddFormula/AddFormula";
 import Ingredientes from "pages/Ingredientes/Ingredientes";
 import Layout from "components/Layout/Layout";
 import AddIngrediente from "pages/AddIngrediente/AddIngrediente";
+import Canchada from "pages/Reports/Canchadas/Canchada";
+import IngredientsStock from "pages/Reports/IngredientsStock/IngredientsStock";
 
 const RouterProvider = () => {
   const theme = useTheme();
@@ -28,6 +30,11 @@ const RouterProvider = () => {
             <Route path={ROUTES.EDIT_FORMULA} element={<AddFormula />} />
             <Route path={ROUTES.VERSION} element={<Version />} />
             <Route path={ROUTES.HOME} element={<Stock />} />
+            <Route path={ROUTES.CANCHADAS} element={<Canchada />} />
+            <Route
+              path={ROUTES.INGREDIENTS_STOCK}
+              element={<IngredientsStock />}
+            />
           </Routes>
         </Layout>
       </BrowserRouter>

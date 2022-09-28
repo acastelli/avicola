@@ -53,7 +53,7 @@ const StockTable = ({
                       defaultValue={row.quantity}
                       type="number"
                       variant="standard"
-                      ismobile={isXs}
+                      ismobile={String(isXs)}
                       inputProps={{
                         min: 0,
                         step: 0.5,

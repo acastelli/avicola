@@ -67,8 +67,20 @@ const Stock = () => {
         justifyContent="space-between"
         alignItems="flex-start"
       >
-        <StyledGridLeft item container xs={12} md={9} xl={10} ismobile={isXs}>
-          <AlertGrid item container justifyContent="center" ismobile={isXs}>
+        <StyledGridLeft
+          item
+          container
+          xs={12}
+          md={9}
+          xl={10}
+          ismobile={String(isXs)}
+        >
+          <AlertGrid
+            item
+            container
+            justifyContent="center"
+            ismobile={String(isXs)}
+          >
             {alert && (
               <Alert
                 severity="error"
@@ -83,7 +95,11 @@ const Stock = () => {
           </AlertGrid>
 
           <Grid item xs={12}>
-            <StyledTitle variant={h1} color="textPrimary" ismobile={isXs}>
+            <StyledTitle
+              variant={h1}
+              color="textPrimary"
+              ismobile={String(isXs)}
+            >
               STOCK
             </StyledTitle>
           </Grid>

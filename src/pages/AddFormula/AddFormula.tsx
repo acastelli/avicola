@@ -87,10 +87,10 @@ const AddFormula = () => {
         container
         justifyContent="flex-start"
         alignItems="center"
-        ismobile={isXs}
+        ismobile={String(isXs)}
       >
         <Grid item xs={12}>
-          <StyledTitle variant={h1} color="textPrimary" ismobile={isXs}>
+          <StyledTitle variant={h1} color="textPrimary" ismobile={String(isXs)}>
             {id ? "MODIFICAR FORMULA" : "AGREGAR FORMULA"}
           </StyledTitle>
         </Grid>

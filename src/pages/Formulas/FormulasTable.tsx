@@ -67,7 +67,7 @@ export const FormulasTable = () => {
                   {rowData.products.length === 0 ? (
                     <span>La formula no tiene ingredientes asociados</span>
                   ) : (
-                    <StyledTable ismobile={isXs}>
+                    <StyledTable ismobile={String(isXs)}>
                       <TableHead>
                         <TableRow>
                           <StyledCell align="center">Ingrediente</StyledCell>

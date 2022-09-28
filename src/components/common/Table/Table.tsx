@@ -25,6 +25,14 @@ const columnsIng: Array<Column<Ingrediente>> = [
     type: "numeric",
     align: "left",
     editable: "onUpdate",
+    render: (rowData) => Math.round(rowData.quantity),
+  },
+  {
+    title: "CANTIDAD MINIMA",
+    field: "minQuantity",
+    type: "numeric",
+    align: "left",
+    editable: "onUpdate",
   },
   {
     title: "PRECIO",

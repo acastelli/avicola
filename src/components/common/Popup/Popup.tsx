@@ -18,7 +18,10 @@ export const Popup = ({ open, handleClose, children }: PopupProps) => {
   const theme = useTheme();
   return (
     <Modal open={open} onClose={handleClose}>
-      <CustomBox backcolor={theme.palette.background.paper} ismobile={isXs}>
+      <CustomBox
+        backcolor={theme.palette.background.paper}
+        ismobile={String(isXs)}
+      >
         {children}
       </CustomBox>
     </Modal>

@@ -33,7 +33,7 @@ type UseFormulaType = {
   getFormulas: (callback?: Callbacks) => void;
   addFormula: (data: NewFormula, callback?: Callbacks) => void;
   editFormula: (data: NewFormula, callback?: Callbacks) => void;
-  getPortionsFormulas: (callback?: Callbacks) => void;
+  getPortionsFormulas: (callback?: Callbacks, date?: string) => void;
   deleteFormula: (id: string, callback?: Callbacks) => void;
 };
 
@@ -145,27 +145,34 @@ export const FormulaProvider = ({ children }: FormulaProviderProps) => {
     [setFormulas]
   );
 
-  const getPortionsFormulas = useCallback((callbacks?: Callbacks) => {
-    setPortionsLoader(true);
-    axios
-      .get(`${API_URL}${API.PORTIONS}`, headers)
-      .then((response) => {
-        !!response &&
-          setPortionFormulas(
-            (response.data as PortionFormula[]).sort(function (a, b) {
-              return a.formula.name.localeCompare(b.formula.name);
-            })
-          );
-        if (callbacks?.success) callbacks.success();
-      })
-      .catch((error: AxiosError) => {
-        if (callbacks?.error) callbacks.error(parseError(error.response?.data));
-      })
-      .finally(() => {
-        setPortionsLoader(false);
-        if (callbacks?.finally) callbacks.finally();
-      });
-  }, []);
+  const getPortionsFormulas = useCallback(
+    (callbacks?: Callbacks, date?: string) => {
+      setPortionsLoader(true);
+      let url = date
+        ? `${API_URL}${API.PORTIONS}?date=${date}`
+        : `${API_URL}${API.PORTIONS}`;
+      axios
+        .get(url, headers)
+        .then((response) => {
+          !!response &&
+            setPortionFormulas(
+              (response.data as PortionFormula[]).sort(function (a, b) {
+                return a.formula.name.localeCompare(b.formula.name);
+              })
+            );
+          if (callbacks?.success) callbacks.success();
+        })
+        .catch((error: AxiosError) => {
+          if (callbacks?.error)
+            callbacks.error(parseError(error.response?.data));
+        })
+        .finally(() => {
+          setPortionsLoader(false);
+          if (callbacks?.finally) callbacks.finally();
+        });
+    },
+    []
+  );
 
   const value = {
     ingredientes,

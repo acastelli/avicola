@@ -4,11 +4,11 @@ import { ColorProp, ResolutionProps } from "utils/helpers";
 
 export const MainGrid = styled(Grid)<ColorProp & ResolutionProps>(
   ({ backcolor, ismobile }) => ({
-    borderRadius: ismobile ? "0.4rem" : "0 1rem 1rem 0",
+    borderRadius: ismobile === "true" ? "0.4rem" : "0 1rem 1rem 0",
     height: "inherit",
     backgroundColor: backcolor,
-    marginTop: ismobile ? "1rem" : 0,
-    marginBottom: ismobile ? "2rem" : 0,
+    marginTop: ismobile === "true" ? "1rem" : 0,
+    marginBottom: ismobile === "true" ? "2rem" : 0,
   })
 );
 
@@ -35,8 +35,8 @@ export const CardDescription = styled(Typography)({
 export const StyledLink = styled(Link)<ResolutionProps>(({ ismobile }) => ({
   fontSize: "1.2rem",
   textDecoration: "underline",
-  float: ismobile ? "right" : "inherit",
-  marginRight: ismobile ? "2rem" : 0,
+  float: ismobile === "true" ? "right" : "inherit",
+  marginRight: ismobile === "true" ? "2rem" : 0,
   "&:hover": {
     cursor: "pointer",
   },
@@ -45,7 +45,7 @@ export const StyledLink = styled(Link)<ResolutionProps>(({ ismobile }) => ({
 export const DivDolarContainer = styled.div<ResolutionProps>(
   ({ ismobile }) => ({
     display: "inline-flex",
-    margin: ismobile ? "0.5rem" : "2rem 0 0 0",
+    margin: ismobile === "true" ? "0.5rem" : "2rem 0 0 0",
   })
 );
 

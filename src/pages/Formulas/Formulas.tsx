@@ -51,10 +51,10 @@ const Formulas = () => {
         justifyContent="space-between"
         alignItems="center"
         alignContent="flex-start"
-        ismobile={isXs}
+        ismobile={String(isXs)}
       >
         <Grid item xs={6}>
-          <StyledTitle variant={h1} color="textPrimary" ismobile={isXs}>
+          <StyledTitle variant={h1} color="textPrimary" ismobile={String(isXs)}>
             FORMULAS
           </StyledTitle>
         </Grid>

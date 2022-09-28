@@ -4,10 +4,10 @@ import { List, ListItemText } from "@material-ui/core";
 
 export const StyledList = styled(List)<ColorProp & ResolutionProps>(
   ({ backcolor, ismobile }) => ({
-    backgroundColor: ismobile ? backcolor : "none",
-    height: ismobile ? "100%" : "inherit",
-    paddingTop: ismobile ? "4rem" : 0,
-    paddingLeft: ismobile ? 0 : "2rem",
+    backgroundColor: ismobile === "true" ? backcolor : "none",
+    height: ismobile === "true" ? "100%" : "inherit",
+    paddingTop: ismobile === "true" ? "4rem" : 0,
+    paddingLeft: ismobile === "true" ? 0 : "2rem",
   })
 );
 

@@ -14,6 +14,6 @@ export const CustomBox = styled(Box)<ColorProp & ResolutionProps>(
     paddingBottom: "4.8rem",
     paddingLeft: "2.4rem",
     paddingRight: "2.9rem",
-    width: ismobile ? "90%" : "40%",
+    width: ismobile === "true" ? "90%" : "40%",
   })
 );

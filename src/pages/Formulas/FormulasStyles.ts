@@ -5,7 +5,7 @@ import { ResolutionProps } from "utils/helpers";
 import { Title } from "components/Layout/LayoutStyles";
 
 export const StyledTitle = styled(Title)<ResolutionProps>(({ ismobile }) => ({
-  marginBottom: ismobile ? "3rem" : 0,
+  marginBottom: ismobile === "true" ? "3rem" : 0,
   textAlign: "left",
 }));
 
@@ -19,7 +19,7 @@ export const StyledCell = styled(TableCell)({
 });
 
 export const StyledTable = styled(Table)<ResolutionProps>(({ ismobile }) => ({
-  width: ismobile ? "100%" : "50%",
+  width: ismobile === "true" ? "100%" : "50%",
 }));
 
 export const StyledDiv = styled.div({

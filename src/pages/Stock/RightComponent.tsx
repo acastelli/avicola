@@ -30,9 +30,9 @@ const RightComponent = ({ dolar }: RightProps) => {
             item
             xs={12}
             backcolor={theme.palette.primary.main}
-            ismobile={isXs}
+            ismobile={String(isXs)}
           >
-            <DivDolarContainer ismobile={isXs}>
+            <DivDolarContainer ismobile={String(isXs)}>
               <DivDolar>
                 <Typography variant={h3}>DOLAR: </Typography>
               </DivDolar>
@@ -42,7 +42,7 @@ const RightComponent = ({ dolar }: RightProps) => {
             </DivDolarContainer>
             <StyledLink
               color="secondary"
-              ismobile={isXs}
+              ismobile={String(isXs)}
               onClick={() => navigate(ROUTES.EDIT_DOLAR)}
             >
               Modificar
@@ -57,7 +57,7 @@ const RightComponent = ({ dolar }: RightProps) => {
           container
           backcolor={theme.palette.grey[100]}
           justifyContent="center"
-          ismobile={isXs}
+          ismobile={String(isXs)}
         >
           <Grid item xs={10}>
             <StyledCard backcolor={theme.palette.text.primary}>
@@ -72,7 +72,7 @@ const RightComponent = ({ dolar }: RightProps) => {
                     COTIZACIÓN
                   </CardTitle>
                 </div>
-                <DivDolarContainer ismobile={isXs}>
+                <DivDolarContainer ismobile={String(isXs)}>
                   <DivDolar>
                     <CardDescription variant={h3} color="textSecondary">
                       DOLAR:
@@ -89,7 +89,7 @@ const RightComponent = ({ dolar }: RightProps) => {
                 <StyledLink
                   color="secondary"
                   onClick={() => navigate(ROUTES.EDIT_DOLAR)}
-                  ismobile={isXs}
+                  ismobile={String(isXs)}
                 >
                   Modificar
                 </StyledLink>

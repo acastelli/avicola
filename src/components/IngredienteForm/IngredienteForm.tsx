@@ -63,6 +63,23 @@ const IngrdienteForm = ({ onSubmit, handleClose }: IngrdienteFormProp) => {
           rules={{ required: "Cantidad es requerido" }}
         />
         <Controller
+          name="minQuantity"
+          control={control}
+          defaultValue={undefined}
+          render={({ field: { onChange, value }, fieldState: { error } }) => (
+            <StyledField
+              label="Cantidad mínima"
+              variant="filled"
+              value={value}
+              onChange={onChange}
+              error={!!error}
+              helperText={error ? error.message : null}
+              type="number"
+            />
+          )}
+          rules={{ required: "Cantidad mínima es requerido" }}
+        />
+        <Controller
           name="cost"
           control={control}
           defaultValue={undefined}

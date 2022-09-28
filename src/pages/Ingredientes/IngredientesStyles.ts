@@ -10,7 +10,7 @@ export const StyledIconButton = styled(IconButton)<ColorProp>(
 );
 
 export const StyledGrid = styled(Grid)<ResolutionProps>(({ ismobile }) => ({
-  marginTop: ismobile ? "2rem" : 0,
+  marginTop: ismobile === "true" ? "2rem" : 0,
 }));
 
 export const StyledButton = styled(Button)({

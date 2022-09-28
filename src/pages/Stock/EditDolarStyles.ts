@@ -12,6 +12,6 @@ export const StyledField = styled(TextField)({
   paddingBottom: "2rem",
 });
 export const StyledTitle = styled(Title)<ResolutionProps>(({ ismobile }) => ({
-  marginBottom: ismobile ? "3rem" : 0,
+  marginBottom: ismobile === "true" ? "3rem" : 0,
   textAlign: "center",
 }));

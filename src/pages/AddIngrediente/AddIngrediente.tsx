@@ -46,10 +46,10 @@ const AddIngrediente = () => {
         justifyContent={isXs ? "flex-start" : "space-between"}
         alignItems="center"
         direction="column"
-        ismobile={isXs}
+        ismobile={String(isXs)}
       >
         <Grid item>
-          <StyledTitle variant={h1} color="textPrimary" ismobile={isXs}>
+          <StyledTitle variant={h1} color="textPrimary" ismobile={String(isXs)}>
             AGREGAR INGREDIENTE
           </StyledTitle>
         </Grid>
